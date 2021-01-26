@@ -14,7 +14,7 @@ const Create = () => {
         
         setIsPending(true);
         
-        fetch('http://localhost:8000/blogs',{
+        fetch('https://my-json-server.typicode.com/dhruvahuja2301/react-dojo-blog-json-server/blogs',{
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(blog)
@@ -27,7 +27,7 @@ const Create = () => {
     return (  
         <div className="create">
             <h2>Add a new Blog</h2>
-            {/* <form action="http://localhost:8000/blogs" method="POST"> */}
+            {/* <form action="https://my-json-server.typicode.com/dhruvahuja2301/react-dojo-blog-json-server/blogs" method="POST"> */}
             <form onSubmit={handleSubmit}>
                 <label htmlFor="title">Title</label>
                 <input type="text" name="title" id="title"

@@ -5,11 +5,11 @@ import { useHistory } from "react-router-dom";
 
 const BlogDetails = () => {
     const { id } = useParams(); 
-    const { data: blog, isPending, error } = useFetch(`http://localhost:8000/blogs/${id}`);
+    const { data: blog, isPending, error } = useFetch(`https://my-json-server.typicode.com/dhruvahuja2301/react-dojo-blog-json-server/blogs/${id}`);
     const history = useHistory();
 
     const deleteBlog = () => {
-        fetch(`http://localhost:8000/blogs/${id}`,{
+        fetch(`https://my-json-server.typicode.com/dhruvahuja2301/react-dojo-blog-json-server/blogs${id}`,{
             method: "DELETE"
         }).then(() => {
             history.push("/");
