@@ -2,7 +2,7 @@ import BlogList from './BlogList';
 import useFetch from './useFetch'
 
 const Home = () => {
-    const { data: blogs, isPending, error } = useFetch("https://my-json-server.typicode.com/dhruvahuja2301/react-dojo-blog-json-server/blogs");
+    const { data: blogs, isPending, error } = useFetch("https://react-dojo-blog-json-server.herokuapp.com/blogs");
 
     return (  
         <div className="home">
