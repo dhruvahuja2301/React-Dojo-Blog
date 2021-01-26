@@ -1,38 +1,149 @@
-.App {
-  text-align: center;
+* {
+  color: #333
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  background: #4AC29A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #9DDFE3, #4AC29A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #9DDFE3, #4AC29A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+}
+.App {
+  margin: 0 auto;
+  max-width: 900px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+@media (max-width: 991px){
+  .App {
+    max-width: 700px;
+  }
+}
+@media (max-width: 768px){
+  .App {
+    margin: 0 1rem;
+    align-items: center;
+  }
+}
+.pink-hover:hover {
+  color: #ff345f;
+  font-weight: 600;
+}
+.content {
+  display: block;
+  align-items: center;
+  padding: 2rem 4rem;
+  /* border: 1px #ddd solid; */
+}
+
+.blog-list a {
+  text-decoration: none;
+}
+.home .blog-list {
+  max-width: 90%;
+  margin: 0 auto;
+}
+.blog-preview{
+  margin: 0.25rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #aaa;
+}
+.blog-preview:hover {
+  box-shadow: 0.1rem 0.3rem 0.5rem rgba(0,0,0,1);
+}
+.blog-preview h3 {
+  font-size: 1.5rem;
+  color: #ff345f !important;
+}
+
+
+div.blog-details {
+  padding: 1rem;
+  margin: 0 1rem;
+  border: 1px #ddd solid;
+}
+div.blog-details h2 {
+  color: #ff345f;
+  margin-bottom: 0.5rem;
+}
+div.blog-details h4{
+  margin-top: 0;
+  margin-left: 1.5rem;
+}
+div.blog-details div {
+  margin: 1rem 0  
+}
+div.blog-details button{
+  background: #ff345f;
   color: white;
+  border: 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+div.blog-details button:hover{
+  box-shadow: 0.1rem 0.3rem 0.5rem rgba(0,0,0,1);
+}
+div.blog-details .links {
+  display: flex;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+/* Navbar */
+.navbar {
+  font-size: 1.5rem;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black
+}
+.navbar .links {
+  display: inline-flex;
+  min-width: 300px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.navbar a.navbar-brand {
+  text-decoration: none;
+}
+.navbar h1{
+  color: #ff345f !important;
+  text-align: center;
+  text-decoration: none;
+}
+@media (max-width: 576px) {
+  .navbar {
+    display: block;
+  }
+  .navbar .links {
+    justify-content: space-evenly;
+    padding-bottom: 1rem;
+    width: 100%;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Form Create Blog */
+div.create{
+  max-width: 350px;
+  margin: 0 auto;
+  text-align: center;  
+}
+div.create h2{
+  color: #ff345f;
+}
+div.create form label {
+  text-align: left;  
+  display: block;
+  margin: 0.25rem 0;
+}
+div.create form input, div.create form select, div.create form textarea {
+  margin: 0.25rem 0;
+  width: 100%;
+}
+div.create form button {
+  background: #ff345f;
+  color: white;
+  border: 0;
+  margin: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
