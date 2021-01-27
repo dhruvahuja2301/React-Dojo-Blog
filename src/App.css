@@ -33,6 +33,11 @@ body {
   padding: 2rem 4rem;
   /* border: 1px #ddd solid; */
 }
+@media (max-width: 768px){
+  .content {
+    padding: 2rem 0.5rem;
+  }
+}
 
 .blog-list a {
   text-decoration: none;
@@ -40,6 +45,11 @@ body {
 .home .blog-list {
   max-width: 90%;
   margin: 0 auto;
+}
+@media(max-width:576px){
+  .home .blog-list {
+    max-width: 100%;
+  }
 }
 .blog-preview{
   margin: 0.25rem;
@@ -109,7 +119,7 @@ div.blog-details .links {
   text-align: center;
   text-decoration: none;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .navbar {
     display: block;
   }
@@ -137,6 +147,8 @@ div.create form label {
 div.create form input, div.create form select, div.create form textarea {
   margin: 0.25rem 0;
   width: 100%;
+  font-size: 1rem;
+  padding: 0.25rem;
 }
 div.create form button {
   background: #ff345f;
